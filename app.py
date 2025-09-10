@@ -3,7 +3,9 @@ import pandas as pd
 import random
 
 # Cargar Excel
-df = pd.read_excel("productos.xlsx", sheet_name="Sheet1", dtype=str)
+url = "https://docs.google.com/spreadsheets/d/11JYz9_9xhIQh0TWNF8S_ZV7vwCgxfI2P/export?format=csv"
+df = pd.read_csv(url, dtype=str)
+
 
 st.set_page_config(page_title="Buscador de Productos", layout="wide")
 st.markdown("<h1 style='text-align:center; color:darkorange;'>🔎 Buscador de Productos</h1>", unsafe_allow_html=True)
